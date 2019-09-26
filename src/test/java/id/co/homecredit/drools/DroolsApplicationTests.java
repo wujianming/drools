@@ -18,4 +18,11 @@ public class DroolsApplicationTests {
 	public void contextLoads() {
 	}
 
+	@Test
+	public void test(){
+		EligibilityPosDto dto = new EligibilityPosDto();
+		dto.setIdAgreement(Arrays.asList("PERMATA","BTPN"));
+		System.out.println(dto.getIdAgreement().contains("DBS"));
+	}
+
 }
