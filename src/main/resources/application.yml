@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Springboot Drools Excel
+
+server:
+  port: 8080
+
+debug: false
