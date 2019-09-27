@@ -7,4 +7,6 @@ public interface DroolService {
 
     KieSession getKieSession(Resource resource);
 
+    Object getObject(String path, Object object);
+
 }

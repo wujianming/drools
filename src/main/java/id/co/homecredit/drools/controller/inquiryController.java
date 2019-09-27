@@ -24,23 +24,24 @@ public class inquiryController {
     @Autowired
     private AgreementPosService agreementPosService;
 
-    @GetMapping(value = "/inquiry/{type}")
-    public ResponseEntity<String> checkResponseActiveStatus(@PathVariable("type") String type) {
+    @GetMapping(value = "${api.inquiry.v1}", produces = "application/json")
+    public ResponseEntity<Object> checkResponseActiveStatus(@PathVariable("type") String type) {
         InboundTypeDto inboundTypeDto = new InboundTypeDto();
         inboundTypeDto.setType(inboundTypeDto.findType(type));
         final InboundTypeDto responseDto = service.getInboundTypeResponse(inboundTypeDto);
-        String response = "Status : "+responseDto.getResponse();
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(responseDto, HttpStatus.OK);
     }
 
-    @PostMapping(value = "/eligibility/pos", produces = "application/json")
-    public ResponseEntity<Object> checkEligibility(@RequestBody EligibilityPosDto dto) {
+    @PostMapping(value = "${api.check-eligibility-pos.v1}", produces = "application/json")
+    public ResponseEntity<Object> checkEligibilityPos(@RequestBody EligibilityPosDto dto) {
         dto.setMaxAgeTenor();
         dto.setCreatedDate(new Date());
         EligibilityPosDto eligibilityPosDto = eligibilityPosService.getListEligibilityPosDto(dto);
         eligibilityPosDto = agreementPosService.getListAgreementReject(eligibilityPosDto);
-        eligibilityPosDto =  agreementPosService.getReasonRejectMinimumDp(eligibilityPosDto);
-        eligibilityPosDto =  agreementPosService.getReasonRejectAge(eligibilityPosDto);
+        if (!eligibilityPosDto.getIdAgreementReject().isEmpty()) {
+            eligibilityPosDto = agreementPosService.getReasonRejectMinimumDp(eligibilityPosDto);
+            eligibilityPosDto = agreementPosService.getReasonRejectAge(eligibilityPosDto);
+        }
         return new ResponseEntity<>(eligibilityPosDto, HttpStatus.OK);
     }
 

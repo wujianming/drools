@@ -1,5 +1,7 @@
 id/co/homecredit/drools/DroolsApplication.class
+id/co/homecredit/drools/constant/DroolsConstant.class
 id/co/homecredit/drools/factory/DroolsFactory.class
+id/co/homecredit/drools/configuration/DroolsConfigurationProperties.class
 id/co/homecredit/drools/controller/inquiryController.class
 id/co/homecredit/drools/service/impl/DroolServiceImpl.class
 id/co/homecredit/drools/service/impl/EligibilityPosServiceImpl.class

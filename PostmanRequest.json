@@ -35,6 +35,26 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Check Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/inquiry/JFS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"inquiry",
+						"JFS"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

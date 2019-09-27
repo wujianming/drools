@@ -2,9 +2,11 @@
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/service/impl/EligibilityPosServiceImpl.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/dto/EligibilityPosDto.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/controller/inquiryController.java
+/Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/constant/DroolsConstant.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/DroolsApplication.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/service/InboundTypeService.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/service/DroolService.java
+/Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/configuration/DroolsConfigurationProperties.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/dto/InboundTypeDto.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/factory/DroolsFactory.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/dto/RejectReasonDto.java
