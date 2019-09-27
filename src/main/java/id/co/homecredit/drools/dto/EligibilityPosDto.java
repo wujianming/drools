@@ -8,7 +8,7 @@ public class EligibilityPosDto {
     private String requestId;
     private List<String> idAgreement = new ArrayList<>();
     private List<String> idAgreementReject = new ArrayList<>();
-    private List<String> rejectReason = new ArrayList<>();
+    private List<RejectReasonDto> rejectReason = new ArrayList<>();
     private double totalLoanDaily;
     private double age;
     private double downPayment;
@@ -97,12 +97,24 @@ public class EligibilityPosDto {
         idAgreementReject.add(name);
     }
 
-    public List<String> getRejectReason() {
+    public List<RejectReasonDto> getRejectReason() {
         return rejectReason;
     }
 
-    public void setRejectReason(String name) {
-        rejectReason.add(name);
+    public void setRejectReason(String idAgreementReject, String reason) {
+        Optional<RejectReasonDto> response = rejectReason.stream().filter(obj -> obj.getIdAgreementReject().equals(idAgreementReject)).findFirst();
+        if (response.isPresent()) {
+            RejectReasonDto rejectReasonDto = response.get();
+            rejectReasonDto.getListReason().add(reason);
+        } else {
+            final List<String> listReason = new ArrayList<>();
+            listReason.add(reason);
+
+            final RejectReasonDto rejectReasonDto = new RejectReasonDto();
+            rejectReasonDto.setIdAgreementReject(idAgreementReject);
+            rejectReasonDto.setListReason(listReason);
+            rejectReason.add(rejectReasonDto);
+        }
     }
 
     @Override

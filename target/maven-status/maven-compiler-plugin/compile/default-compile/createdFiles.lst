@@ -6,6 +6,7 @@ id/co/homecredit/drools/service/impl/EligibilityPosServiceImpl.class
 id/co/homecredit/drools/service/AgreementPosService.class
 id/co/homecredit/drools/dto/EligibilityPosDto.class
 id/co/homecredit/drools/service/impl/InboundTypeServiceImpl.class
+id/co/homecredit/drools/dto/RejectReasonDto.class
 id/co/homecredit/drools/service/InboundTypeService.class
 id/co/homecredit/drools/service/impl/AgreementPosServiceImpl.class
 id/co/homecredit/drools/service/DroolService.class

@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "5fd6beb8-0937-4a5d-8c6d-a4f5ea707e00",
+		"name": "Drools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Check Eligibility Pos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"requestId\" : \"ANY-1234\",\n\t\"totalLoanDaily\": 2000000,\n\t\"age\" : 23,\n\t\"downPayment\" : 12,\n\t\"tenor\" : 7\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/eligibility/pos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eligibility",
+						"pos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

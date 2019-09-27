@@ -8,4 +8,6 @@ public interface AgreementPosService {
 
     EligibilityPosDto getReasonRejectMinimumDp(EligibilityPosDto eligibilityPosDto);
 
+    EligibilityPosDto getReasonRejectAge(EligibilityPosDto eligibilityPosDto);
+
 }

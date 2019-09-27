@@ -40,6 +40,7 @@ public class inquiryController {
         EligibilityPosDto eligibilityPosDto = eligibilityPosService.getListEligibilityPosDto(dto);
         eligibilityPosDto = agreementPosService.getListAgreementReject(eligibilityPosDto);
         eligibilityPosDto =  agreementPosService.getReasonRejectMinimumDp(eligibilityPosDto);
+        eligibilityPosDto =  agreementPosService.getReasonRejectAge(eligibilityPosDto);
         return new ResponseEntity<>(eligibilityPosDto, HttpStatus.OK);
     }
 

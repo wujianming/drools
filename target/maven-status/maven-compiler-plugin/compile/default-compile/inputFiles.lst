@@ -7,6 +7,7 @@
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/service/DroolService.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/dto/InboundTypeDto.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/factory/DroolsFactory.java
+/Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/dto/RejectReasonDto.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/service/impl/AgreementPosServiceImpl.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/service/AgreementPosService.java
 /Users/benny.prasetia/homecredit/benny/Test/Drools/src/main/java/id/co/homecredit/drools/service/impl/InboundTypeServiceImpl.java

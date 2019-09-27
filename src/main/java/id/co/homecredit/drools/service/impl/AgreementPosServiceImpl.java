@@ -37,4 +37,14 @@ public class AgreementPosServiceImpl implements AgreementPosService {
         kieSession.fireAllRules();
         return eligibilityPosDto;
     }
+
+    @Override
+    public EligibilityPosDto getReasonRejectAge(EligibilityPosDto eligibilityPosDto) {
+        final String path = "drools/rules/response/pos/reject/AgeReasonRejectPos.xls";
+        final Resource resource = droolsFactory.createResource(path);
+        final KieSession kieSession = droolService.getKieSession(resource);
+        kieSession.insert(eligibilityPosDto);
+        kieSession.fireAllRules();
+        return eligibilityPosDto;
+    }
 }
