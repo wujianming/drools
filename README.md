@@ -1,2 +1,3 @@
-# drools
-Read Excel Rules using drools
+# Drools
+
+Drools Read Excel Rules and Response Reject

@@ -12,3 +12,11 @@ api:
     v1: /inquiry/{type}
   check-eligibility-pos:
     v1: /eligibility/pos
+
+drools:
+  rules:
+    eligibility:
+      pos:
+        - drools/rules/EligibilityPosDto.xls
+        - drools/rules/response/pos/reject/DownPaymentReasonRejectPos.xls
+        - drools/rules/response/pos/reject/AgeReasonRejectPos.xls

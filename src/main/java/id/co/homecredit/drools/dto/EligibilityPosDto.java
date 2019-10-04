@@ -1,13 +1,14 @@
 package id.co.homecredit.drools.dto;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 public class EligibilityPosDto {
 
-
     private String requestId;
     private List<String> idAgreement = new ArrayList<>();
-    private List<String> idAgreementReject = new ArrayList<>();
     private List<RejectReasonDto> rejectReason = new ArrayList<>();
     private double totalLoanDaily;
     private double age;
@@ -15,7 +16,6 @@ public class EligibilityPosDto {
     private int tenor;
     private double maxAgeTenor;
     private Date createdDate;
-
 
     public String getRequestId() {
         return requestId;
@@ -31,14 +31,6 @@ public class EligibilityPosDto {
 
     public void setIdAgreement(List<String> idAgreement) {
         this.idAgreement = idAgreement;
-    }
-
-    public List<String> getIdAgreementReject() {
-        return idAgreementReject;
-    }
-
-    public void setIdAgreementReject(List<String> idAgreementReject) {
-        this.idAgreementReject = idAgreementReject;
     }
 
     public double getTotalLoanDaily() {
@@ -93,10 +85,6 @@ public class EligibilityPosDto {
         idAgreement.add(name);
     }
 
-    public void addIdAgreementReject(String name) {
-        idAgreementReject.add(name);
-    }
-
     public List<RejectReasonDto> getRejectReason() {
         return rejectReason;
     }
@@ -107,12 +95,9 @@ public class EligibilityPosDto {
             RejectReasonDto rejectReasonDto = response.get();
             rejectReasonDto.getListReason().add(reason);
         } else {
-            final List<String> listReason = new ArrayList<>();
-            listReason.add(reason);
-
             final RejectReasonDto rejectReasonDto = new RejectReasonDto();
             rejectReasonDto.setIdAgreementReject(idAgreementReject);
-            rejectReasonDto.setListReason(listReason);
+            rejectReasonDto.getListReason().add(reason);
             rejectReason.add(rejectReasonDto);
         }
     }
@@ -122,7 +107,6 @@ public class EligibilityPosDto {
         return "EligibilityPosDto{" +
                 "requestId='" + requestId + '\'' +
                 ", idAgreement=" + idAgreement +
-                ", idAgreementReject=" + idAgreementReject +
                 ", rejectReason=" + rejectReason +
                 ", totalLoanDaily=" + totalLoanDaily +
                 ", age=" + age +

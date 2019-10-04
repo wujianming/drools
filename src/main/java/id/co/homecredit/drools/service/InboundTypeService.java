@@ -4,6 +4,6 @@ import id.co.homecredit.drools.dto.InboundTypeDto;
 
 public interface InboundTypeService {
 
-    InboundTypeDto getInboundTypeResponse(InboundTypeDto inboundTypeDto);
+    InboundTypeDto getInboundTypeResponse(String requestId,InboundTypeDto inboundTypeDto);
 
 }
