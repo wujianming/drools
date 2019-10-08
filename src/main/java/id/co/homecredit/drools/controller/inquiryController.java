@@ -42,6 +42,7 @@ public class inquiryController {
         dto.setMaxAgeTenor();
         dto.setCreatedDate(new Date());
         EligibilityPosDto eligibilityPosDto = eligibilityPosService.getAllEligibilityPosDto(dto.getRequestId(), dto);
+
         log.info("inquiryController.checkEligibilityPos success requestId : {}, EligibilityPosDto : {}", dto.getRequestId(), eligibilityPosDto);
         return new ResponseEntity<>(eligibilityPosDto, HttpStatus.OK);
     }
